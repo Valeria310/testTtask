@@ -1,7 +1,9 @@
 {
     "items": [
-        { "text": "Go to #shop", "tags": ["shop"] },
-        { "text": "Go to #cafe", "tags": ["cafe", "eat"] },
-        { "text": "Go to #cafe and #shop", "tags": ["cafe", "eat", "shop"] }
+        { "text": "Go to #shop", "tags": ["#shop"] },
+        { "text": "Go to #cafe", "tags": ["#cafe", "#eat"] },
+        { "text": "Go to #cafe and #shop", "tags": ["#cafe", "#eat", "#shop"] },
+        { "text": "Go out", "tags": ["#cafe", "#eat", "#shop"] },
+        { "text": "Go to #cafe", "tags": ["#cafe", "#eat"] }
     ]
 }

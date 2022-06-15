@@ -1,3 +1,6 @@
+<button class="add-tag-btn" mat-flat-button color="primary" (click)="handleBackClick()">
+    <mat-icon>create</mat-icon>
+</button>
 <form class="form" [formGroup]="filterForm" (ngSubmit)="submit()">
     <div class="form-group input">
         <div class="form-control-label">Введите тег:</div>
@@ -12,7 +15,7 @@
 <div class="filter-tags-wrapper">
     <mat-chip-list>
         <mat-basic-chip class="filter-tag" disableRipple="true" *ngFor="let tag of keyTags"
-            >{{ tag }}
+            >{{ tag | removeHash }}
             <button class="filter-tag-btn" (click)="handleDeleteClick(tag)">
                 <mat-icon class="filter-tag-icon">cancel</mat-icon>
             </button></mat-basic-chip
@@ -20,5 +23,9 @@
     </mat-chip-list>
 </div>
 <div class="notes-list-container">
-    <app-note-item routerLink="note" *ngFor="let note of notesList | filter: keyTags" [note]="note"></app-note-item>
+    <app-note-item
+        *ngFor="let note of notesList | filter: keyTags"
+        [note]="note"
+        (click)="handleCardClick(note)"
+    ></app-note-item>
 </div>

@@ -11,7 +11,7 @@ export class FilterPipe implements PipeTransform {
         if (tags.length) {
             tags.forEach((tag) => {
                 currentValue = newValue;
-                newValue = currentValue.filter((val) => val.tags.includes(tag));
+                newValue = currentValue.filter((val) => val.tags.includes('#' + tag));
             });
         }
         return newValue;

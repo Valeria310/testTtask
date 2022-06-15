@@ -9,10 +9,19 @@ import { NoteItemComponent } from './note-item/note-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [AppComponent, MainComponent, NotesListComponent, NoteItemComponent],
-    imports: [BrowserModule, AppRoutingModule, MaterialModule, HttpClientModule, SharedModule, ReactiveFormsModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MaterialModule,
+        HttpClientModule,
+        SharedModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
