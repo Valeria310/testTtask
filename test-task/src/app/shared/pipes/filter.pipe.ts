@@ -5,10 +5,14 @@ import { INote } from '../models/note';
     name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
-    transform(value: INote[], tag: string): INote[] {
+    transform(value: INote[], tags: string[]): INote[] {
         let newValue = value;
-        if (tag) {
-            newValue = value.filter((val) => val.tags.includes(tag));
+        let currentValue;
+        if (tags.length) {
+            tags.forEach((tag) => {
+                currentValue = newValue;
+                newValue = currentValue.filter((val) => val.tags.includes(tag));
+            });
         }
         return newValue;
     }

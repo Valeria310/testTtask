@@ -44,8 +44,14 @@ html, body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.tag {
-    padding: 7px 12px;
-    border-radius: 16px;
-    background-color: lightblue;
+.mat-chip-list-wrapper {
+    background-color: inherit;
+    margin: 0 !important;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: default;
 }

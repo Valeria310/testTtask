@@ -9,6 +9,16 @@
         </button>
     </div>
 </form>
+<div class="filter-tags-wrapper">
+    <mat-chip-list>
+        <mat-basic-chip class="filter-tag" disableRipple="true" *ngFor="let tag of keyTags"
+            >{{ tag }}
+            <button class="filter-tag-btn" (click)="handleDeleteClick(tag)">
+                <mat-icon class="filter-tag-icon">cancel</mat-icon>
+            </button></mat-basic-chip
+        >
+    </mat-chip-list>
+</div>
 <div class="notes-list-container">
-    <app-note-item routerLink="note" *ngFor="let note of notesList | filter: keyTag" [note]="note"></app-note-item>
+    <app-note-item routerLink="note" *ngFor="let note of notesList | filter: keyTags" [note]="note"></app-note-item>
 </div>

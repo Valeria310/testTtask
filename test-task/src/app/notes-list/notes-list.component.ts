@@ -14,10 +14,10 @@ export class NotesListComponent implements OnInit, OnDestroy {
     notesList: INote[] = [];
     subscr?: Subscription;
     filterForm: FormGroup;
-    keyTag: string = '';
+    keyTags: string[] = [];
 
     constructor(private getNotesService: GetNotesService) {
-        this.filterForm = new FormGroup({ keyWord: new FormControl('') });
+        this.filterForm = new FormGroup({ keyWord: new FormControl('', Validators.required) });
     }
 
     ngOnInit(): void {
@@ -27,8 +27,15 @@ export class NotesListComponent implements OnInit, OnDestroy {
     }
 
     submit() {
-        this.keyTag = this.filterForm.controls['keyWord'].value;
-        // this.filterForm.controls['keyWord'].setValue('');
+        if (!this.keyTags.includes(this.filterForm.controls['keyWord'].value)) {
+            this.keyTags = [...this.keyTags, this.filterForm.controls['keyWord'].value];
+        }
+        this.filterForm.controls['keyWord'].setValue('');
+    }
+
+    handleDeleteClick(tag: string) {
+        const tagIndex = this.keyTags.indexOf(tag);
+        this.keyTags = [...this.keyTags.slice(0, tagIndex), ...this.keyTags.slice(tagIndex + 1)];
     }
 
     ngOnDestroy(): void {

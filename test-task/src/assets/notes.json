@@ -1,6 +1,7 @@
 {
     "items": [
         { "text": "Go to #shop", "tags": ["shop"] },
-        { "text": "Go to #cafe", "tags": ["cafe", "eat"] }
+        { "text": "Go to #cafe", "tags": ["cafe", "eat"] },
+        { "text": "Go to #cafe and #shop", "tags": ["cafe", "eat", "shop"] }
     ]
 }

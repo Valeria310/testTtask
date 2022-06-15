@@ -25,11 +25,3 @@
     color: rgba(0, 0, 0, 0.87);
     margin: 0.3rem;
 }
-
-.delete-btn {
-    cursor: pointer;
-    transition: all .3s;
-    &:hover {
-        color: rgb(254, 109, 109);
-    }
-}
