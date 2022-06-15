@@ -3,21 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoteBoardComponent } from './note-board.component';
 
 describe('NoteBoardComponent', () => {
-  let component: NoteBoardComponent;
-  let fixture: ComponentFixture<NoteBoardComponent>;
+    let component: NoteBoardComponent;
+    let fixture: ComponentFixture<NoteBoardComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ NoteBoardComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [ NoteBoardComponent ]
+        })
+            .compileComponents();
 
-    fixture = TestBed.createComponent(NoteBoardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(NoteBoardComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
