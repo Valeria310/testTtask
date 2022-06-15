@@ -1,0 +1,14 @@
+<form class="form" [formGroup]="filterForm" (ngSubmit)="submit()">
+    <div class="form-group input">
+        <div class="form-control-label">Введите тег:</div>
+        <input class="form-control" name="keyWord" formControlName="keyWord" />
+    </div>
+    <div class="form-group">
+        <button mat-flat-button color="primary" [disabled]="filterForm.invalid">
+            <mat-icon aria-hidden="false">search</mat-icon>
+        </button>
+    </div>
+</form>
+<div class="notes-list-container">
+    <app-note-item routerLink="note" *ngFor="let note of notesList | filter: keyTag" [note]="note"></app-note-item>
+</div>

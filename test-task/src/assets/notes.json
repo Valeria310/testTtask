@@ -1,0 +1,6 @@
+{
+    "items": [
+        { "text": "Go to #shop", "tags": ["shop"] },
+        { "text": "Go to #cafe", "tags": ["cafe", "eat"] }
+    ]
+}

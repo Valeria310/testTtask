@@ -1,0 +1,6 @@
+<mat-card class="note-wrapper">
+    <p class="note-text">{{ text | removeHash }}</p>
+    <mat-chip-list class="note-tags">
+        <mat-basic-chip class="note-tag" disableRipple="true" *ngFor="let tag of tags">{{ tag }}</mat-basic-chip>
+    </mat-chip-list>
+</mat-card>
